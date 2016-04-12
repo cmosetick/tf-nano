@@ -1,0 +1,8 @@
+access_key = "XXXXXXXXXXXXXXXX"
+secret_key = "XXXXXXXXXXXXXXXXXXXXXXXXXX"
+aws_region = "us-west-2"
+
+# use in-project rsa key to connect to host
+# make sure it is added to ssh-agent session
+aws_key_path = "./files/cmosetick-terraform"
+aws_key_name = "cmosetick-terraform"
