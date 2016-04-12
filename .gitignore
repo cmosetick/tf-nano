@@ -1,0 +1,5 @@
+terraform.tfstate*
+terraform.tfvars
+files/distelli.yml
+files/cmosetick-terraform*
+notes.private
