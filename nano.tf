@@ -12,9 +12,8 @@ resource "aws_instance" "Cmosetick-Nano" {
   availability_zone = "${var.my_availability_zone}"
 	# see variables.tf to control how many instances
   count = "${var.count}"
-	#user_data = "${element(template_file.host_init.*.rendered, count.index)}"
   security_groups = ["${aws_security_group.Cmosetick-Public.id}"]
-  # public ip is optional in this scenario, useful for testing s
+  # public ip is optional in this scenario, useful for testing
   associate_public_ip_address = "True"
 	user_data = "${file("cloud-config/install.yml")}"
 		tags {
