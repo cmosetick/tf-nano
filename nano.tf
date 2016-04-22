@@ -6,9 +6,10 @@ provider "aws" {
 resource "aws_instance" "Cmosetick-Nano" {
   ami = "${lookup (var.my_amis,var.region) }"
   instance_type = "t2.nano"
-  key_name = "${var.key_name}" # ssh key required for terraform provisioner
+	# key required if you want to login to remote system via ssh
+  key_name = "${var.key_name}"
   subnet_id = "${aws_subnet.Cmosetick-Public.id}"
-	#subnet_id = "${var.my_subnet}"
+	# subnet_id = "${var.my_subnet}"
   availability_zone = "${var.my_availability_zone}"
 	# see variables.tf to control how many instances
   count = "${var.count}"
