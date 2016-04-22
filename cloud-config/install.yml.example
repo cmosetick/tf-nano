@@ -1,0 +1,18 @@
+#cloud-config
+
+# Install Distelli agent on all servers
+
+write_files:
+  - encoding: text/plain
+    owner: root:root
+    path: /etc/distelli.yml
+    permissions: '0644'
+    content: |
+      DistelliAccessToken: 'xxxxxxxxxxxxxxxxxx'
+      DistelliSecretKey: 'xxxxxxxxxxxxxxxxxxxx'
+      Environments:
+      - tf-nano-dev
+
+runcmd:
+  - curl -sL https://www.distelli.com/download/client | sh
+  - sudo distelli agent install -conf /etc/distelli.yml
