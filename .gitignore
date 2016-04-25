@@ -1,5 +1,5 @@
 terraform.tfstate*
 terraform.tfvars
-files/distelli.yml
+cloud-config/install.yml
 files/cmosetick-terraform*
 notes.private
