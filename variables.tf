@@ -1,6 +1,6 @@
 # How many ec2 instances should we create
 variable "count" {
-  default = 2
+  default = 0
 }
 
 variable "access_key" {}
