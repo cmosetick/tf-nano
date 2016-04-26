@@ -9,7 +9,7 @@ cmosetick/tf-nano:
     - ls -la
     - pwd
     - ls bin
-    - export TF_VAR_count=1
+    #- export TF_VAR_count=1
     - echo "what is the count?"
     - echo $TF_VAR_count
     - echo $TF_VAR_access_key
