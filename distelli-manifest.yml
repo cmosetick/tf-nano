@@ -11,6 +11,7 @@ cmosetick/tf-nano:
     - ssh -V
     - echo "where is my agent"
     - which ssh-agent
+    - ssh-agent bash
     - ssh-add $PUB_KEY
     - bin/terraform plan
     - bin/terraform apply
