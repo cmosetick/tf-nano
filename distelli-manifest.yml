@@ -8,10 +8,8 @@ cmosetick/tf-nano:
     - cd /build
     - pwd
     - ls bin
-    - ssh -V
-    - echo "where is my agent"
-    - which ssh-agent
-    - ssh-agent bash
-    - ssh-add $PUB_KEY
+    - export TF_VAR_count=1
+    - echo "what is the count?"
+    - echo $TF_VAR_count
     - bin/terraform plan
     - bin/terraform apply
