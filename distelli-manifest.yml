@@ -12,7 +12,7 @@ cmosetick/tf-nano:
     - export TF_VAR_count=1
     - echo "what is the count?"
     - echo $TF_VAR_count
-    - echo "PubKey: '$PUB_KEY'" >> /build/files/cmosetick-terraform
+    - echo "PubKey: '$PUB_KEY'" >> /build/files/cmosetick-terraform.pub
     - echo "DistelliAccessToken: '$DISTELLI_ACCESS_TOKEN'" >> distelli.yml
     - echo "DistelliSecertKey: '$DISTELLI_SECRET_KEY'" >> distelli.yml
     - bin/terraform plan
