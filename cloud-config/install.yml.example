@@ -12,6 +12,7 @@ write_files:
       DistelliSecretKey: '@SECRET@'
       Environments:
       - tf-nano-dev
+      - en-dev
 
 runcmd:
   - curl -sL https://www.distelli.com/download/client | sh
