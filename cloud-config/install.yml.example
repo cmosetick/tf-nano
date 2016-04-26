@@ -8,8 +8,8 @@ write_files:
     path: /etc/distelli.yml
     permissions: '0644'
     content: |
-      DistelliAccessToken: 'xxxxxxxxxxxxxxxxxx'
-      DistelliSecretKey: 'xxxxxxxxxxxxxxxxxxxx'
+      DistelliAccessToken: '@TOKEN@'
+      DistelliSecretKey: '@SECRET@'
       Environments:
       - tf-nano-dev
 
