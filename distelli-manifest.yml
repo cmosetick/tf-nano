@@ -16,5 +16,6 @@ cmosetick/tf-nano:
     - echo $TF_VAR_secret_key
     - echo "$PUB_KEY" >> /build/files/cmosetick-terraform.pub
     - cat cloud-config/install.yml.example | sed "s/@SECRET@/$DISTELLI_SECRET_KEY/;s/@TOKEN@/$DISTELLI_ACCESS_TOKEN/" > cloud-config/install.yml
+    - terraform remote config -backend=s3 -backend-config="bucket=cm-distelli-tf-state" -backend-config="key=tf-nano-test/terraform.tfstate" -backend-config="region=us-west-2"
     - bin/terraform plan
     - bin/terraform apply
