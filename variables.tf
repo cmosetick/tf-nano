@@ -22,7 +22,7 @@ variable "my_subnet"{
 
 variable "my_amis" {
         default = {
-                us-west-2 = "ami-0eea016e" #Ubuntu 16.04 Devel, hvm:ebs-ssd, us-west-2
+                us-west-2 = "ami-fa82739a" #Ubuntu 16.04, hvm:ebs-ssd, us-west-2
                 #us-west-1 = " "
                 #us-east-1 = " "
 
