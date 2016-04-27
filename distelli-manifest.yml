@@ -1,10 +1,11 @@
 cmosetick/tf-nano:
   Build:
+    - echo "print working directory"
     - pwd
     - mkdir bin
     - cd bin
-    - wget -q https://releases.hashicorp.com/terraform/0.6.14/terraform_0.6.14_linux_amd64.zip
-    - unzip -qq terraform_0.6.14_linux_amd64.zip
+    - wget -q https://releases.hashicorp.com/terraform/0.6.15/terraform_0.6.15_linux_amd64.zip
+    - unzip -qq terraform_0.6.15_linux_amd64.zip
     - cd /build
     - ls -la
     - pwd
@@ -15,7 +16,8 @@ cmosetick/tf-nano:
     - echo $TF_VAR_access_key
     - echo $TF_VAR_secret_key
     - echo "$PUB_KEY" >> /build/files/cmosetick-terraform.pub
-    - cat cloud-config/install.yml.example | sed "s/@SECRET@/$DISTELLI_SECRET_KEY/;s/@TOKEN@/$DISTELLI_ACCESS_TOKEN/" > cloud-config/install.yml
+    - cat cloud-config/install.yml.example | sed "s/@SECRET@/$DISTELLI_SECRET_KEY/; > cloud-config/install.yml
+    - cat cloud-config/install.yml.example | sed "s/@TOKEN@/$DISTELLI_ACCESS_TOKEN/" >> cloud-config/install.yml
     - bin/terraform remote config -backend=s3 -backend-config="bucket=cm-distelli-tf-state" -backend-config="key=tf-nano-test/terraform.tfstate" -backend-config="region=us-west-2"
     - bin/terraform plan
     - bin/terraform apply
